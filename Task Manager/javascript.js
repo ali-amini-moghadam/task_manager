@@ -21,6 +21,8 @@ function close_modal() {
 // appear modal window .....
 function appear_modal() {
     var modal = document.getElementsByClassName('overlay_modal')[0];
+    var input_title = document.getElementById('input_title');
+    input_title.focus();
     modal.style.display = 'block';
 }
 // Changing wallpaper of the background grid in modal ....
@@ -30,7 +32,7 @@ function switch_background(file_name) {
     this.file_name = file_name;
 }
 // Activate the create board button ...
-function enable_create_btn() {
+function enable_create_btn(e) {
     var input_title = document.getElementById('input_title');
     var create_btn = document.getElementById('create_btn');
     if(input_title.value != "") {
