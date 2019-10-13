@@ -36,6 +36,9 @@ function enable_create_btn() {
     if(input_title.value != "") {
         create_btn.style.color = 'black';
         create_btn.style.cursor = 'pointer';
+        if(e.key == 'Enter') {
+            create_board();
+        }
     }
     else {
         create_btn.style.color = 'rgba(128, 128, 128, 0.4)';
